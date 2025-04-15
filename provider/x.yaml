@@ -9,7 +9,7 @@ identity:
     en_US: Interact with the X (formerly Twitter) platform through their official API.
     ja_JP: 公式APIを通じてX（旧Twitter）プラットフォームと対話します。
     zh_Hans: 通过官方API与X（前Twitter）平台交互。
-  icon: icon.svg
+  icon: icon.jpg
 credentials_for_provider:
   api_key:
     label:

@@ -22,6 +22,7 @@ It provides tools to send and delete tweets.
 2. Create a project and app to obtain your API keys:
    - Go to the [Developer Portal Dashboard](https://developer.twitter.com/en/portal/dashboard)
    - Click "Create Project" and follow the steps
+   ![](./_assets/app_permission.png)
    - Within your project, create an app to get your API keys and tokens
    - Navigate to the "Keys and tokens" section to find your Consumer Keys (API Key and Secret)
    ![](./_assets/consumer_key.png)
@@ -59,6 +60,8 @@ It provides tools to send and delete tweets.
 
 #### Posting a Tweet
 
+![](./_assets/post.png)
+
 ```json
 {
   "text": "Your tweet content here"
@@ -77,6 +80,8 @@ Response:
 
 #### Deleting a Tweet
 
+![](./_assets/delete.png)
+
 ```json
 {
   "tweet_id": "1234567890123456789"
@@ -94,6 +99,8 @@ Response:
 #### Posting a Media Tweet
 
 This action allows you to upload and attach media (images or videos) to your tweets.
+
+![](./_assets/post_media.png)
 
 Parameters:
 - `text`: The text content of your tweet (max 280 characters)
