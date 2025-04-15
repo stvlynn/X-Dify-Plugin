@@ -1,0 +1,31 @@
+version: 0.0.1
+type: plugin
+author: stvlynn
+name: x
+label:
+  en_US: X (formerly Twitter)
+  ja_JP: X（旧Twitter）
+  zh_Hans: X（前Twitter）
+description:
+  en_US: Post, delete tweets and perform other operations via X API
+  ja_JP: X APIを通じて投稿、削除などの操作を行います
+  zh_Hans: 通过X API发帖、删帖等操作
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/x.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-04-14T19:18:09.620404+08:00
+privacy: PRIVACY.md
+verified: false
