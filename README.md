@@ -1,12 +1,14 @@
 ## X (formerly Twitter) Dify Plugin
 
-**Author:** stvlynn
+**Author:** [Steven Lynn](https://github.com/stvlynn)
 **Version:** 0.0.1
 **Type:** tool
 
 ### Description
 
-This plugin allows you to interact with the X (formerly Twitter) platform through their official API. It provides tools to send and delete tweets.
+This plugin allows you to interact with the X (formerly Twitter) platform through their official API. 
+
+It provides tools to send and delete tweets.
 
 ### Features
 
@@ -21,16 +23,31 @@ This plugin allows you to interact with the X (formerly Twitter) platform throug
    - Go to the [Developer Portal Dashboard](https://developer.twitter.com/en/portal/dashboard)
    - Click "Create Project" and follow the steps
    - Within your project, create an app to get your API keys and tokens
-3. Set up OAuth 1.0a with user context authentication:
-   - In your app settings, configure the OAuth 1.0a settings
-   - Ensure you set the correct permission level (Read and Write)
-   - Generate your Access Token and Secret
-
-4. Configure the following credentials in the plugin settings:
-   - **API Key**: Your X API Key (Consumer Key)
-   - **API Secret**: Your X API Secret (Consumer Secret)
-   - **Access Token**: OAuth 1.0a Access Token
-   - **Access Token Secret**: OAuth 1.0a Access Token Secret
+   - Navigate to the "Keys and tokens" section to find your Consumer Keys (API Key and Secret)
+   ![](./_assets/consumer_key.png)
+3. Set up authentication:
+   - Clone this repository to your local machine:
+     ```
+     git clone https://github.com/stvlynn/X-Dify-Plugin.git
+     cd X-Dify-Plugin
+     ```
+   - Edit the `auth.py` file and fill in your Consumer Key and Secret
+   ![](./_assets/script.png)
+   - Run the authentication script:
+     ```
+     python auth.py
+     ```
+   - The script will provide an authorization URL. Open it in your browser
+   - Authorize your application and enter the verification code when prompted
+   ![](./_assets/verification.png)
+   - The script will output your ACCESS_TOKEN and ACCESS_TOKEN_SECRET
+4. Configure the plugin in Dify:
+   - Install the X Plugin from the Dify Marketplace
+   - In the plugin settings, enter the following credentials:
+     - **API Key**: Your X API Key (Consumer Key)
+     - **API Secret**: Your X API Secret (Consumer Secret)
+     - **Access Token**: OAuth 1.0a Access Token generated from auth.py
+     - **Access Token Secret**: OAuth 1.0a Access Token Secret generated from auth.py
 
 ### Authentication Notes
 
@@ -106,5 +123,16 @@ Response:
 }
 ```
 
+## Feedback and Issues
 
+If you encounter any problems or have suggestions for improvements:
 
+1. Please open an issue in the [plugin's GitHub repository](https://github.com/stvlynn/X-Dify-Plugin/issues)
+
+2. Provide details about your problem, including error messages and steps to reproduce
+
+3. **Do not** submit issues to the main [Dify](https://github.com/langgenius/dify) repository for plugin-specific problems
+
+## License
+
+[MIT](./LICENSE)
